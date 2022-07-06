@@ -25,7 +25,10 @@
 ## About The Project
 
 <div align="center">
-  <img src="project-image.png">
+  <img align="top" src="imgs/daily-schedule.png">
+  <img align="top" src="imgs/daily-task-list.png">
+  <img align="top" src="imgs/weekly-schedule.png">
+  <img align="top" src="imgs/weekly-task-list.png">
 </div>
 <br />
 
