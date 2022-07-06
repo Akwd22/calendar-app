@@ -57,6 +57,7 @@ This project is an academic project realized during the **second year** in the *
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- BUILT WITH -->
 ## Built With
 
 - [Xamarin](https://docs.microsoft.com/xamarin/get-started/what-is-xamarin)
