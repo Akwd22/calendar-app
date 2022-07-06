@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PTS4.Views.Components.TaskTag">
+    <ContentView.Content>
+        <Button x:Name="TagButton" Text="Text"
+                TextColor="White"
+                FontSize="12"
+                BackgroundColor="{StaticResource Secondary}"
+                CornerRadius="100"
+                HeightRequest="24"
+                Padding="0"
+                Margin="2"
+                Clicked="OnTagButtonClicked" />
+    </ContentView.Content>
+</ContentView>

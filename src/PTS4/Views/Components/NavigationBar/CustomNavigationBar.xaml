@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PTS4.Views.Components.NavigationBar"
+             x:Class="PTS4.Views.Components.CustomNavigationBar">
+    <ContentView.Content>
+        <AbsoluteLayout BackgroundColor="{StaticResource Primary}" Padding="12">
+            <ImageButton Source="bars.png" Clicked="FlyoutButtonClicked" AbsoluteLayout.LayoutBounds="0, 0" />
+
+            <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0" AbsoluteLayout.LayoutFlags="PositionProportional">
+                <local:DateSwitcher />
+                <local:ViewSwitcher Margin="0, 8, 0, 0" />
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentView.Content>
+</ContentView>

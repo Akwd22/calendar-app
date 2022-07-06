@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PTS4.Views.Components.CalendarHeader">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CalendarHeader" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="HeightRequest" Value="42" />
+                <Setter Property="Padding" Value="15, 5" />
+
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <VisualState Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Secondary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState Name="Closed">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
+                                    <Setter TargetName="CloseButton" Property="ImageButton.Source" Value="down_arrow.png" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    
+    <ContentView.Content>
+        <Frame x:Name="CalendarHeaderFrame" Style="{StaticResource CalendarHeader}">
+            <Grid VerticalOptions="Center" ColumnDefinitions="*, Auto, Auto">
+                <Label Text="{Binding Day}" Grid.Column="0" FontSize="16" FontAttributes="Bold"/>
+                <Label Text="{Binding Date}" Grid.Column="1" FontSize="16" />
+                <ImageButton x:Name="CloseButton" Source="up_arrow.png" Grid.Column="2" Clicked="OnCloseButtonClicked" />
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

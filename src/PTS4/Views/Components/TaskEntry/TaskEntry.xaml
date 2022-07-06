@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:entry="clr-namespace:PTS4.Views.Components.EntryParts"
+             x:Class="PTS4.Views.Components.TaskEntry">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TaskEntry" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="Padding" Value="6" />
+
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <VisualState Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#006BBF" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState Name="Completed">
+                                <VisualState.StateTriggers>
+                                    <StateTrigger IsActive="{Binding Completed}" />
+                                </VisualState.StateTriggers>
+
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#106E3F" />
+                                    <Setter TargetName="CompleteButton" Property="ImageButton.Source" Value="circle_filled.png" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Frame x:Name="TaskEntryFrame" Style="{StaticResource TaskEntry}">
+            <Grid ColumnDefinitions="Auto, *, Auto">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapped" />
+                </Grid.GestureRecognizers>
+                
+                <entry:EntryScheduleBox Grid.Column="0" />
+                <entry:EntryInfoBox Grid.Column="1" />
+                <ImageButton x:Name="CompleteButton" Source="circle_unfilled.png" Grid.Column="2" Clicked="OnCompleteButtonClicked" />
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

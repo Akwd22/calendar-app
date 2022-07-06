@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="MainTheme" parent="MainTheme.Base">
+    <!-- As of Xamarin.Forms 4.6 the theme has moved into the Forms binary -->
+    <!-- If you want to override anything you can do that here. -->
+    <!-- Underneath are a couple of entries to get you started. -->
+
+    <!-- Set theme colors from https://aka.ms/material-colors -->
+    <!-- colorPrimary is used for the default action bar background -->
+    <item name="colorPrimary">#305880</item>
+    <!-- colorPrimaryDark is used for the status bar -->
+    <item name="colorPrimaryDark">#002E52</item>
+    <!-- colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets -->
+    <item name="colorAccent">#6083AF</item>
+
+    <!-- Couleurs ListView -->
+    <item name="android:colorPressedHighlight">@color/listViewHighlighted</item>
+    <item name="android:colorLongPressedHighlight">@color/listViewHighlighted</item>
+    <item name="android:colorFocusedHighlight">@color/listViewSelected</item>
+    <item name="android:colorActivatedHighlight">@color/listViewSelected</item>
+    <item name="android:activatedBackgroundIndicator">@color/listViewSelected</item>
+
+    <!-- Couleurs DatePicker -->
+    <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+  </style>
+
+  <color name="listViewSelected">#305880</color>
+  <color name="listViewHighlighted">#305880</color>
+
+  <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+    <item name="colorAccent">#305880</item>
+  </style>
+</resources>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:PTS4.Views.Components"
+             x:Class="PTS4.Views.CalendarTaskViews.DayTaskView">
+  <ContentView.Content>
+        <StackLayout>
+            <Label Text="Tâches" TextColor="{StaticResource Primary}" FontSize="20" FontAttributes="Bold" />
+            <Label x:Name="CompletedTaskLabel" Text="" TextColor="{StaticResource Primary}" FontSize="16" />
+
+            <StackLayout x:Name="TaskEntryList">
+                <components:TaskEntry />
+                <components:TaskEntry />
+                <components:TaskEntry />
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

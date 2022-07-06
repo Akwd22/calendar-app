@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PTS4.Views.Components.EntryParts.EntryInfoBox">
+    <ContentView.Content>
+        <StackLayout>
+            <Label Text="{Binding Title}" FontSize="20" LineBreakMode="NoWrap" />
+            <Label Text="{Binding Subtitle}" FontSize="14" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

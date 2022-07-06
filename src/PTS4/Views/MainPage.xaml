@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:PTS4.Views.Components"
+             xmlns:views="clr-namespace:PTS4.Views.CalendarTaskViews"
+             x:Class="PTS4.Views.MainPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <components:CustomNavigationBar />
+                
+                <!-- Conteneur pour les vues calendrier, tâches, jour, semaine, mois -->
+                <StackLayout x:Name="ViewContainer" Style="{StaticResource Page}">
+                    <views:DayCalendarView x:Name="DayCalendarView" IsVisible="False" />
+                    <views:WeekCalendarView x:Name="WeekCalendarView" IsVisible="False" />
+                    <views:DayTaskView x:Name="DayTaskView" IsVisible="False" />
+                    <views:WeekTaskView x:Name="WeekTaskView" IsVisible="False" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

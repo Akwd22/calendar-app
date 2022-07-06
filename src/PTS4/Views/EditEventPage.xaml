@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="PTS4.Views.EditEventPage"
+             Title="Créer/modifier un évènement">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Style="{StaticResource Page}">
+                <Label Text="Date de début*" />
+                <DatePicker MinimumDate="{x:Static sys:DateTime.Now}" />
+
+                <Label Text="Date de fin*" />
+                <DatePicker MinimumDate="{x:Static sys:DateTime.Now}" />
+
+                <Label Text="Sujet*"/>
+                <Entry Placeholder="Réunion avancement de projet" />
+
+                <Label Text="Emplacement"/>
+                <Entry Placeholder="Salle 102" />
+
+                <Label Text="Description" />
+                <Editor AutoSize="TextChanges" Placeholder="Montrer les avancées sur le projet du site web au client" />
+
+                <Label Text="Répétition" />
+                <Picker>
+                    <Picker.Items>
+                        <x:String>Aucune</x:String>
+                        <x:String>Chaque jour</x:String>
+                        <x:String>Chaque semaine</x:String>
+                        <x:String>Chaque mois</x:String>
+                    </Picker.Items>
+                    <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                </Picker>
+
+                <Button Text="Créer/Modifier" BackgroundColor="Green" TextColor="White" Margin="0, 20, 0, 0" />
+                <Button Text="Supprimer" BackgroundColor="DarkRed" TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

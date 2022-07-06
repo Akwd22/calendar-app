@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PTS4.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Styles généraux -->
+            <Color x:Key="Primary">#305880</Color>
+            <Color x:Key="Secondary">#6083AF</Color>
+            <Color x:Key="Tertiary">#002E52</Color>
+
+            <Style TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="#00000000" />
+            </Style>
+
+            <Style x:Key="Page" TargetType="StackLayout">
+                <Setter Property="Margin" Value="15" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

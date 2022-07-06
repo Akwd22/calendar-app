@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="PTS4.Views.EditTaskPage"
+             Title="Créer/modifier une tâche">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Style="{StaticResource Page}">
+                <Label Text="Date*" />
+                <DatePicker x:Name="DatePicker" Date="{x:Binding StartTime, Mode=TwoWay}" DateSelected="DatePickerDateSelected" />
+
+                <Label Text="Matière" />
+                <Picker x:Name="CoursePicker" SelectedIndexChanged="CoursePickerSelectedIndexChanged">
+                </Picker>
+
+                <Label Text="Titre*"/>
+                <Entry x:Name="TitleEntry" Text="{x:Binding Title, Mode=TwoWay}" Placeholder="DM Anglais" />
+                
+                <!-- Mots-clés pour le titre de la tâche -->
+                <FlexLayout x:Name="TaskTagList" Direction="Row" JustifyContent="Center"  Wrap="Wrap">
+                </FlexLayout>
+
+                <Label Text="Description" Margin="0, 20, 0, 0" />
+                <Editor x:Name="DescriptionEntry" AutoSize="TextChanges" Placeholder="Résumer le texte vu en cours" Text="{x:Binding Description, Mode=TwoWay}" />
+                
+                <Label Text="Répétition" />
+                <Picker x:Name="RepeatPicker" SelectedIndexChanged="RepeatPickerSelectedIndexChanged">
+                </Picker>
+
+                <Button x:Name="ValidateButton" Text="Créer/Modifier" BackgroundColor="Green" TextColor="White" Margin="0, 20, 0, 0" Clicked="ValidateButtonClicked" />
+                <Button x:Name="DeleteButton" Text="Supprimer" BackgroundColor="DarkRed" TextColor="White" Clicked="DeleteButtonClicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    
+    

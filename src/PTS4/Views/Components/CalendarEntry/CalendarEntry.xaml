@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:entry="clr-namespace:PTS4.Views.Components.EntryParts"
+             x:Class="PTS4.Views.Components.CalendarEntry">
+    <ContentView.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+    </ContentView.Resources>
+    
+    <ContentView.Content>
+        <Frame x:Name="CalendarEntryFrame" BackgroundColor="#006BBF" CornerRadius="10" HeightRequest="60" Padding="6">
+            <Grid ColumnDefinitions="Auto, *, Auto">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapped" />
+                </Grid.GestureRecognizers>
+                
+                <entry:EntryScheduleBox Grid.Column="0" />
+                <entry:EntryInfoBox Grid.Column="1" />
+                <Label x:Name="TaskNumberLabel" Text="" Grid.Column="2" VerticalTextAlignment="End" Padding="6" FontSize="12" />
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+</ContentView>
+    
+    

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:PTS4.Views.Components"
+             x:Class="PTS4.Views.CalendarTaskViews.DayCalendarView">
+  <ContentView.Content>
+        <StackLayout>
+            <Label Text="Calendrier" TextColor="{StaticResource Primary}" FontSize="20" FontAttributes="Bold" />
+
+            <StackLayout x:Name="CalendarEntryList">
+            </StackLayout>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>
